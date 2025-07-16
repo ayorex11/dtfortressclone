@@ -1,6 +1,60 @@
-.bg-hampton-purple {background-color: #33387a;}
+/* Add to your CSS file */
+:root {
+  --primary-purple: #33387a;       /* Hampton Purple */
+  --dark-purple: #072e3f;          /* Dark Purple */
+  --accent-purple: #7847d4;        /* Purple */
+  --light-purple: #a78bfa;         /* For highlights */
+  --purple-300: #d8b4fe;           /* Lighter purple for backgrounds */
+  --text-light: #f8fafc;           /* For text on dark backgrounds */
+  --text-dark: #1e293b;            /* For text on light backgrounds */
+}
 
-.bg-dark-purple{background-color: #072e3f;}
-    .text-dark-purple{color: #072e3f}
+/* Update existing classes with new variables */
+.bg-hampton-purple { background-color: var(--primary-purple); }
+.bg-dark-purple { background-color: var(--dark-purple); }
+.text-dark-purple { color: var(--dark-purple); }
+.purple { background-color: var(--accent-purple); }
 
-.purple{background-color: #7847d4;}
+/* Add animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add these to your CSS */
+/* Button hover effects */
+.btn-purple {
+  background-color: var(--accent-purple);
+  transition: all 0.3s ease;
+}
+
+.btn-purple:hover {
+  background-color: var(--primary-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(120, 71, 212, 0.2);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient backgrounds */
+.bg-purple-gradient {
+  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--dark-purple) 100%);
+}
