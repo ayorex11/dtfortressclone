@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <link rel="shortcut icon" href="https://www.dtfortress.com/wiassets/assets/images/favico.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="font-sans bg-white">
     <!-- Header -->
@@ -30,15 +30,15 @@
                     <div class="w-full md:w-5/12 mt-2 md:mt-0">
                         <div class="flex flex-wrap justify-between items-center">
                             <ul class="flex space-x-4 text-sm">
-                                <li><a href="#" class="text-white hover:text-blue-600">Company</a></li>
-                                <li><a href="#" class="text-white hover:text-blue-600">Support</a></li>
-                                <li><a href="#" class="text-white hover:text-blue-600">Faqs</a></li>
+                                <li><a href="#" class="text-white hover:text-blue-300">Company</a></li>
+                                <li><a href="#" class="text-white hover:text-blue-300">Support</a></li>
+                                <li><a href="#" class="text-white hover:text-blue-300">Faqs</a></li>
                             </ul>
                             <ul class="flex space-x-3">
-                                <li><a href="#"><i class="fab fa-facebook-f text-white"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter text-white"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in text-white"></i></a></li>
-                                <li><a href="#"><i class="fab fa-youtube text-white"></i></a></li>
+                                <li><a href="#"><i class="fab fa-facebook-f text-white hover:text-blue-300"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter text-white hover:text-blue-300"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in text-white hover:text-blue-300"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube text-white hover:text-blue-300"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -47,19 +47,23 @@
         </div>
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <!-- Logo on the left -->
+                <!-- Logo -->
                 <div class="logo">
                     <a href="#">
                         <img src="https://www.dtfortress.com/wiassets/assets/images/logo.png" alt="Logo" class="h-10" />
                     </a>
                 </div>
-                <!-- Nav bar aligned right -->
-                <nav class="md:block">
-                    <ul class="flex ms-auto space-x-8">
-                        <li><a href="#" class="text-white hover:text-blue-600">Home</a></li>
-                        <li><a href="#About" class="text-white hover:text-blue-600">About Us</a></li>
-                        <li><a href="#Services" class="text-white hover:text-blue-600">Services</a></li>
-                        <li><a href="#Contact" class="text-white hover:text-blue-600">Contact</a></li>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <!-- Navigation -->
+                <nav class="hidden md:block">
+                    <ul class="hidden md:flex ms-auto space-x-8">
+                        <li><a href="#" class="text-white hover:text-blue-300 font-medium">Home</a></li>
+                        <li><a href="#About" class="text-white hover:text-blue-300 font-medium">About Us</a></li>
+                        <li><a href="#Services" class="text-white hover:text-blue-300 font-medium">Services</a></li>
+                        <li><a href="#Contact" class="text-white hover:text-blue-300 font-medium">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -68,46 +72,45 @@
 
     <!-- Main Content -->
     <main class="pt-32">
-        <!-- Banner Section -->
-        
-        <section class="bg-hampton-purple from-dark-purple to-primary-purple text-white py-32">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center">
-            <div class="lg:w-1/2 mb-12 lg:mb-0">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Dedicated to safeguarding businesses in an increasing digital world
-                </h1>
-                <p class="text-xl mb-8 opacity-90">
-                Comprehensive CyberSecurity solutions that defend businesses against evolving threats.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                <a href="#Contact" class="bg-accent-purple hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-medium transition duration-300 transform hover:scale-105">
-                    Get Started Now
-                </a>
-                <a href="#" class="flex items-center text-white hover:text-purple-300 transition duration-300">
-                    <span class="w-12 h-12 bg-accent-purple rounded-full flex items-center justify-center mr-3">
-                    <i class="fas fa-play"></i>
-                    </span>
-                    Watch Our Video
-                </a>
+        <!-- Hero Banner -->
+        <section class="bg-gradient-to-r from-dark-purple to-primary-purple text-white py-20 md:py-32">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center">
+                    <div class="lg:w-1/2 mb-12 lg:mb-0">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                            Dedicated to safeguarding businesses in an increasing digital world
+                        </h1>
+                        <p class="text-xl mb-8 opacity-90">
+                            Comprehensive CyberSecurity solutions that defend businesses against evolving threats.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#Contact" class="btn-purple px-8 py-4 rounded-lg font-medium">
+                                Get Started Now
+                            </a>
+                            <a href="#" class="flex items-center text-white hover:text-purple-300 transition duration-300">
+                                <span class="w-12 h-12 bg-accent-purple rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-play"></i>
+                                </span>
+                                Watch Our Video
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <img src="https://www.dtfortress.com/wiassets/assets/images/page/banner-h3.png" 
+                            alt="Cybersecurity illustration" 
+                            class="w-full max-w-lg mx-auto animate-float">
+                    </div>
                 </div>
             </div>
-            <div class="lg:w-1/2">
-                <img src="https://www.dtfortress.com/wiassets/assets/images/page/banner-h3.png" 
-                    alt="Cybersecurity illustration" 
-                    class="w-full max-w-lg mx-auto animate-float">
-            </div>
-            </div>
-        </div>
         </section>
 
         <!-- About Section -->
         <section class="py-20" id="About">
             <div class="container mx-auto px-4">
                 <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="text-dark-purple font-medium mb-2 block">About Company</span>
+                    <span class="text-accent-purple font-medium mb-2 block">About Company</span>
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                        Integrity and <span class="text-black">Value Focused</span>
+                        Integrity and <span class="text-dark-purple">Value Focused</span>
                     </h2>
                 </div>
                 <div class="flex flex-wrap">
@@ -123,7 +126,7 @@
                             To empower organizations with robust IT assurance and security solutions, ensuring they can
                             operate confidently and securely in today's digital landscape.
                         </p>
-                        <a href="#About" class="text-dark-purple font-medium flex items-center">
+                        <a href="#About" class="text-accent-purple font-medium flex items-center hover:text-dark-purple">
                             Continue Reading <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -132,107 +135,126 @@
         </section>
 
         <!-- Services Section -->
-        <!-- Improved Services Section -->
         <section class="py-20 bg-purple-50" id="Services">
-        <div class="container mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-accent-purple font-semibold mb-2 block uppercase tracking-wider">Cyber Security Solutions</span>
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                Our Comprehensive <span class="text-dark-purple">Security Services</span>
-            </h2>
-            <p class="text-lg text-gray-600">Protecting your digital assets with cutting-edge solutions</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Service Card 1 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                <div class="p-6">
-                <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fas fa-shield-alt text-accent-purple text-2xl"></i>
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent-purple font-semibold mb-2 block uppercase tracking-wider">Cyber Security Solutions</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        Our Comprehensive <span class="text-dark-purple">Security Services</span>
+                    </h2>
+                    <p class="text-lg text-gray-600">Protecting your digital assets with cutting-edge solutions</p>
                 </div>
-                <h3 class="text-xl font-bold mb-3">Information & Cybersecurity Consulting</h3>
-                <p class="text-gray-600 mb-4">
-                    Expert advice to develop robust information strategies and enhance cybersecurity posture.
-                </p>
-                <a href="#" class="text-accent-purple font-medium flex items-center">
-                    Learn more <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-                </div>
-            </div>
-            <!-- Service Card 2 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                <div class="p-6">
-                <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fas fa-network-wired text-accent-purple text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Information Security</h3>
-                <p class="text-gray-600 mb-4">
-                    Protecting critical data from unauthorized access, disclosure, alteration, and destruction. This service includes implementing security controls, encryption, access management, and data loss prevention measures to safeguard information assets.
-                </p>
-                <a href="#" class="text-accent-purple font-medium flex items-center">
-                    Learn more <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-                </div>
-            </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="service-card">
+                        <div class="p-6">
+                            <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-shield-alt text-accent-purple text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Information & Cybersecurity Consulting</h3>
+                            <p class="text-gray-600 mb-4">
+                                Expert advice to develop robust information strategies and enhance cybersecurity posture.
+                            </p>
+                            <a href="#" class="text-accent-purple font-medium flex items-center hover:text-dark-purple">
+                                Learn more <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Card 2 -->
+                    <div class="service-card">
+                        <div class="p-6">
+                            <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-network-wired text-accent-purple text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Information Security</h3>
+                            <p class="text-gray-600 mb-4">
+                                Protecting critical data from unauthorized access with comprehensive security controls and encryption.
+                            </p>
+                            <a href="#" class="text-accent-purple font-medium flex items-center hover:text-dark-purple">
+                                Learn more <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
 
-            <!-- Service Card 3 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 transform hover:-translate-y-2">
-                <div class="p-6">
-                <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fas fa-lightbulb text-accent-purple text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">Risk Management (Technology)</h3>
-                <p class="text-gray-600 mb-4">
-                    Identifying, assessing, and mitigating risks associated with technology use within organizations. Our approach ensures that potential threats are managed proactively, minimizing their impact on business operations and ensuring resilience against cyber incidents
-                </p>
-                <a href="#" class="text-accent-purple font-medium flex items-center">
-                    Learn more <i class="fas fa-arrow-right ml-2"></i>
-                </a>
+                    <!-- Service Card 3 -->
+                    <div class="service-card">
+                        <div class="p-6">
+                            <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                                <i class="fas fa-lightbulb text-accent-purple text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Risk Management</h3>
+                            <p class="text-gray-600 mb-4">
+                                Proactive identification and mitigation of technology risks to ensure business resilience.
+                            </p>
+                            <a href="#" class="text-accent-purple font-medium flex items-center hover:text-dark-purple">
+                                Learn more <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            </div>
-        </div>
+        </section>
 
         <!-- Testimonials Section -->
         <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-accent-purple font-semibold mb-2 block">Client Testimonials</span>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                What Our <span class="text-dark-purple">Clients Say</span>
-            </h2>
+            <div class="container mx-auto px-4">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent-purple font-semibold mb-2 block">Client Testimonials</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        What Our <span class="text-dark-purple">Clients Say</span>
+                    </h2>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-user text-accent-purple"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">John Doe</h4>
+                                <p class="text-gray-500 text-sm">CEO, TechCorp</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            "DT Fortress transformed our security infrastructure with their expert consulting. Highly recommended!"
+                        </p>
+                        <div class="flex mt-4 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                                <i class="fas fa-user text-accent-purple"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Jane Smith</h4>
+                                <p class="text-gray-500 text-sm">CTO, SecureSystems</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            "Their risk management approach saved us from potential breaches. Exceptional service!"
+                        </p>
+                        <div class="flex mt-4 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-            <!-- Testimonial 1 -->
-            <div class="bg-white p-8 rounded-lg shadow-md">
-                <div class="flex items-center mb-4">
-                <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
-                    <i class="fas fa-user text-accent-purple"></i>
-                </div>
-                <div>
-                    <h4 class="font-bold">John Doe</h4>
-                    <p class="text-gray-500 text-sm">CEO, TechCorp</p>
-                </div>
-                </div>
-                <p class="text-gray-700">
-                "DT Fortress transformed our security infrastructure with their expert consulting. Highly recommended!"
-                </p>
-                <div class="flex mt-4 text-yellow-400">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                </div>
-            </div>
-            
-            <!-- Add more testimonials -->
-            </div>
-        </div>
-        </section>
-
         </section>
 
         <!-- Footer -->
@@ -240,18 +262,10 @@
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap">
                     <div class="w-full md:w-3/12 mb-10 md:mb-0">
-                        <img
-                            src="https://www.dtfortress.com/wiassets/assets/images/logo-footer2.png"
-                            alt="Logo"
-                            class="h-10 mb-6"
-                        />
+                        <img src="https://www.dtfortress.com/wiassets/assets/images/logo-footer2.png" alt="Logo" class="h-10 mb-6" />
                         <form class="relative">
-                            <input
-                                type="email"
-                                placeholder="Email Address"
-                                class="w-full bg-white text-black px-4 py-3 rounded pl-10"
-                            />
-                            <button type="submit" class="absolute right-3 top-3">
+                            <input type="email" placeholder="Email Address" class="w-full bg-white text-black px-4 py-3 rounded pl-10" />
+                            <button type="submit" class="absolute right-3 top-3 text-gray-500 hover:text-accent-purple">
                                 <i class="fas fa-arrow-right"></i>
                             </button>
                         </form>
@@ -259,35 +273,51 @@
                     <div class="w-full md:w-3/12 mb-10 md:mb-0">
                         <h5 class="text-xl font-bold mb-6">Services</h5>
                         <ul class="space-y-3">
-                            <li><a href="#" class="hover:text-blue-300">Information & Cybersecurity Consulting</a></li>
-                            <li><a href="#" class="hover:text-blue-300">Information Security</a></li>
-                            <li><a href="#" class="hover:text-blue-300">Risk Management</a></li>
-                            <li><a href="#" class="hover:text-blue-300">Cloud Computing Security</a></li>
-                            <li><a href="#" class="hover:text-blue-300">AI Security & Governance</a></li>
-                            <li><a href="#" class="hover:text-blue-300">Compliance</a></li>
+                            <li><a href="#" class="hover:text-accent-purple transition">Information & Cybersecurity Consulting</a></li>
+                            <li><a href="#" class="hover:text-accent-purple transition">Information Security</a></li>
+                            <li><a href="#" class="hover:text-accent-purple transition">Risk Management</a></li>
+                            <li><a href="#" class="hover:text-accent-purple transition">Cloud Computing Security</a></li>
+                            <li><a href="#" class="hover:text-accent-purple transition">AI Security & Governance</a></li>
+                            <li><a href="#" class="hover:text-accent-purple transition">Compliance</a></li>
                         </ul>
                     </div>
                     <div class="w-full md:w-3/12 mb-10 md:mb-0">
                         <h5 class="text-xl font-bold mb-6">Locations</h5>
                         <p class="mb-6">Awolowo Road, Ikoyi, Lagos.</p>
                         <h5 class="text-xl font-bold mb-6">Contact</h5>
-                        <p class="mb-2">hello@dtfortress.com</p>
-                        <p>+2348038332122</p>
+                        <p class="mb-2 hover:text-accent-purple transition"><a href="mailto:hello@dtfortress.com">hello@dtfortress.com</a></p>
+                        <p class="hover:text-accent-purple transition"><a href="tel:+2348038332122">+234 803 833 2122</a></p>
                     </div>
                 </div>
-                <div class="border-t border-blue-800 mt-10 pt-8">
+                <div class="border-t border-gray-800 mt-10 pt-8">
                     <div class="flex flex-wrap justify-between items-center">
                         <p>© 2025 DT Fortress Limited. All rights reserved.</p>
                         <ul class="flex space-x-4">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" class="hover:text-accent-purple transition"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" class="hover:text-accent-purple transition"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" class="hover:text-accent-purple transition"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#" class="hover:text-accent-purple transition"><i class="fab fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
     </main>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('bg-primary-purple');
+            nav.classList.toggle('w-full');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('top-32');
+            nav.classList.toggle('p-4');
+        });
+    </script>
 </body>
 </html>

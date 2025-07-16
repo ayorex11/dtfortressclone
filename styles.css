@@ -1,24 +1,37 @@
-/* Add to your CSS file */
+/* Color Variables */
 :root {
   --primary-purple: #33387a;       /* Hampton Purple */
   --dark-purple: #072e3f;          /* Dark Purple */
   --accent-purple: #7847d4;        /* Purple */
   --light-purple: #a78bfa;         /* For highlights */
-  --purple-300: #d8b4fe;           /* Lighter purple for backgrounds */
+  --purple-100: #f3e8ff;           /* Very light purple */
+  --purple-300: #d8b4fe;           /* Lighter purple */
   --text-light: #f8fafc;           /* For text on dark backgrounds */
   --text-dark: #1e293b;            /* For text on light backgrounds */
 }
 
-/* Update existing classes with new variables */
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Color Classes */
 .bg-hampton-purple { background-color: var(--primary-purple); }
 .bg-dark-purple { background-color: var(--dark-purple); }
-.text-dark-purple { color: var(--dark-purple); }
-.purple { background-color: var(--accent-purple); }
+.bg-accent-purple { background-color: var(--accent-purple); }
+.bg-purple-50 { background-color: var(--purple-100); }
 
-/* Add animations */
+.text-dark-purple { color: var(--dark-purple); }
+.text-accent-purple { color: var(--accent-purple); }
+
+/* Animations */
 @keyframes float {
   0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-15px); }
   100% { transform: translateY(0px); }
 }
 
@@ -26,35 +39,85 @@
   animation: float 6s ease-in-out infinite;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Add these to your CSS */
-/* Button hover effects */
+/* Components */
 .btn-purple {
   background-color: var(--accent-purple);
+  color: white;
   transition: all 0.3s ease;
 }
 
 .btn-purple:hover {
   background-color: var(--primary-purple);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(120, 71, 212, 0.2);
+  box-shadow: 0 10px 20px rgba(120, 71, 212, 0.3);
 }
 
-/* Card hover effects */
-.card-hover {
+.service-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
-.card-hover:hover {
+.service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Gradient backgrounds */
-.bg-purple-gradient {
-  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--dark-purple) 100%);
+.testimonial-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 767px) {
+  nav ul {
+    display: none;
+  }
+  
+  nav ul.flex {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 120px;
+    background-color: var(--primary-purple);
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  main {
+    padding-top: 120px;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+/* Transitions */
+.transition {
+  transition: all 0.3s ease;
+}
+
+/* Gradient Background */
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--dark-purple), var(--primary-purple));
 }
